@@ -197,3 +197,92 @@ section{
     opacity:1;
     transform:translateY(0);
 }
+.booking-box{
+
+max-width:700px;
+
+margin:auto;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.booking-box form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.booking-box input,
+
+.booking-box textarea{
+
+padding:15px;
+
+font-size:16px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+outline:none;
+
+}
+
+.booking-box textarea{
+
+height:150px;
+
+resize:none;
+
+}
+
+.booking-box button{
+
+background:#0E8F61;
+
+color:white;
+
+border:none;
+
+padding:18px;
+
+font-size:18px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.booking-box button:hover{
+
+background:#056d48;
+
+}
+
+iframe{
+
+width:100%;
+
+height:450px;
+
+border:none;
+
+border-radius:20px;
+
+margin-top:30px;
+
+}
