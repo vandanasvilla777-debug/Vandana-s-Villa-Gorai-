@@ -42,3 +42,12 @@ document.querySelectorAll("section").forEach(sec => {
     sec.classList.add("hidden");
     observer.observe(sec);
 });
+// Dark Mode
+
+document.getElementById("darkMode")
+
+.addEventListener("click",()=>{
+
+document.body.classList.toggle("dark");
+
+});
