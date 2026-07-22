@@ -22,7 +22,11 @@ window.addEventListener('scroll', () => {
     } else {
         nav.style.background = "rgba(0,0,0,.65)";
     }
+window.onload=function(){
 
+document.getElementById("loader").style.display="none";
+
+}
 });
 
 // Fade-in Animation
