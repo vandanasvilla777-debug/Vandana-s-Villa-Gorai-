@@ -327,3 +327,54 @@ transition:.3s;
 transform:scale(1.15);
 
 }
+.slider{
+
+width:100%;
+
+overflow:hidden;
+
+padding:40px 0;
+
+background:#fff;
+
+}
+
+.slides{
+
+display:flex;
+
+gap:20px;
+
+animation:slide 18s infinite linear;
+
+}
+
+.slides img{
+
+width:420px;
+
+height:280px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+@keyframes slide{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
