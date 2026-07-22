@@ -491,3 +491,274 @@ color:#666;
 line-height:1.8;
 
 }
+/* ==========================================
+   GALLERY
+========================================== */
+
+#gallery{
+    background:#fff;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   ROOMS
+========================================== */
+
+#rooms{
+    background:#f8f8f8;
+}
+
+.room-card{
+
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.room-image{
+
+    flex:1;
+
+}
+
+.room-image img{
+
+    width:100%;
+    height:450px;
+    object-fit:cover;
+
+}
+
+.room-content{
+
+    flex:1;
+    padding:40px;
+
+}
+
+.room-content h3{
+
+    font-size:35px;
+    margin-bottom:20px;
+
+}
+
+.room-content ul{
+
+    margin:30px 0;
+    line-height:2;
+
+}
+
+.room-content ul li{
+
+    list-style:none;
+
+}
+
+.room-content h2{
+
+    color:#D4AF37;
+    text-align:left;
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   REVIEWS
+========================================== */
+
+#reviews{
+
+background:white;
+
+}
+
+.review-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.review-card{
+
+background:#fafafa;
+
+padding:35px;
+
+border-radius:18px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.review-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.review-card p{
+
+margin:20px 0;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+.review-card h4{
+
+color:#D4AF37;
+
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+section h2{
+
+position:relative;
+
+display:inline-block;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding-bottom:15px;
+
+}
+
+section h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:0;
+
+width:70px;
+
+height:4px;
+
+background:#D4AF37;
+
+transform:translateX(-50%);
+
+border-radius:50px;
+
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+img{
+
+transition:.4s;
+
+}
+
+img:hover{
+
+filter:brightness(1.05);
+
+}
+
+/* ==========================================
+   BUTTON EFFECT
+========================================== */
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:rgba(255,255,255,.2);
+
+transition:.5s;
+
+}
+
+.btn:hover::before{
+
+left:100%;
+
+}
+
+/* ==========================================
+   SCROLL ANIMATION
+========================================== */
+
+section{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+section.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
