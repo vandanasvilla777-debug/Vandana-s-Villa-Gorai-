@@ -205,3 +205,217 @@ topBtn.addEventListener("click", () => {
     });
 
 });
+// ===========================================
+// WHATSAPP BOOKING FORM
+// ===========================================
+
+const bookingForm = document.getElementById("bookingForm");
+
+if (bookingForm) {
+
+bookingForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const name = bookingForm.querySelector('input[type="text"]').value;
+
+const phone = bookingForm.querySelector('input[type="tel"]').value;
+
+const email = bookingForm.querySelector('input[type="email"]').value;
+
+const date = bookingForm.querySelector('input[type="date"]').value;
+
+const guests = bookingForm.querySelector('input[type="number"]').value;
+
+const message = bookingForm.querySelector("textarea").value;
+
+const whatsappMessage =
+
+`🏡 *Vandana's Villa Booking Request*
+
+👤 Name: ${name}
+
+📱 Mobile: ${phone}
+
+📧 Email: ${email}
+
+📅 Date: ${date}
+
+👥 Guests: ${guests}
+
+📝 Message: ${message}`;
+
+const url =
+`https://wa.me/919769602777?text=${encodeURIComponent(whatsappMessage)}`;
+
+window.open(url,"_blank");
+
+bookingForm.reset();
+
+});
+
+}
+
+// ===========================================
+// HERO TEXT ANIMATION
+// ===========================================
+
+const heroTitle = document.querySelector(".hero h1");
+
+if(heroTitle){
+
+heroTitle.animate([
+
+{opacity:0,transform:"translateY(50px)"},
+
+{opacity:1,transform:"translateY(0)"}
+
+],{
+
+duration:1200,
+
+fill:"forwards"
+
+});
+
+}
+
+// ===========================================
+// PARALLAX EFFECT
+// ===========================================
+
+window.addEventListener("scroll",()=>{
+
+const hero=document.querySelector(".hero");
+
+if(hero){
+
+hero.style.backgroundPositionY=(window.scrollY*0.4)+"px";
+
+}
+
+});
+
+// ===========================================
+// IMAGE FADE EFFECT
+// ===========================================
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.addEventListener("load",()=>{
+
+img.style.opacity="1";
+
+});
+
+});
+
+// ===========================================
+// NUMBER COUNTER
+// ===========================================
+
+const counters=document.querySelectorAll(".counter");
+
+const counterObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const speed=Math.ceil(target/100);
+
+const update=()=>{
+
+count+=speed;
+
+if(count>=target){
+
+counter.innerText=target;
+
+}else{
+
+counter.innerText=count;
+
+requestAnimationFrame(update);
+
+}
+
+};
+
+update();
+
+counterObserver.unobserve(counter);
+
+}
+
+});
+
+});
+
+counters.forEach(counter=>{
+
+counterObserver.observe(counter);
+
+});
+
+// ===========================================
+// SMOOTH BUTTON EFFECT
+// ===========================================
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("mouseenter",()=>{
+
+btn.style.transform="translateY(-5px) scale(1.03)";
+
+});
+
+btn.addEventListener("mouseleave",()=>{
+
+btn.style.transform="translateY(0) scale(1)";
+
+});
+
+});
+
+// ===========================================
+// CURRENT YEAR
+// ===========================================
+
+const year=document.getElementById("year");
+
+if(year){
+
+year.textContent=new Date().getFullYear();
+
+}
+
+// ===========================================
+// PREVENT RIGHT CLICK (OPTIONAL)
+// ===========================================
+
+// document.addEventListener("contextmenu",e=>e.preventDefault());
+
+// ===========================================
+// DISABLE IMAGE DRAG
+// ===========================================
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.setAttribute("draggable","false");
+
+});
+
+// ===========================================
+// CONSOLE MESSAGE
+// ===========================================
+
+console.log("%c🏡 Vandana's Villa","font-size:22px;color:#D4AF37;font-weight:bold");
+
+console.log("Website Developed by CK's Limited");
