@@ -378,3 +378,50 @@ transform:translateX(-50%);
 }
 
 }
+footer{
+
+background:#111;
+
+color:white;
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+footer h2{
+
+margin-bottom:20px;
+
+}
+
+footer p{
+
+margin:10px;
+
+}
+
+.social{
+
+margin-top:20px;
+
+}
+
+.social a{
+
+color:white;
+
+margin:15px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.social a:hover{
+
+color:#FFD700;
+
+}
