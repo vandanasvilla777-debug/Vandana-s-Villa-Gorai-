@@ -46,3 +46,36 @@ document.querySelectorAll("section").forEach(sec => {
     sec.classList.add("hidden");
     observer.observe(sec);
 });
+const form=document.querySelector("form");
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+let name=form.querySelector("input[type=text]").value;
+
+let phone=form.querySelector("input[type=tel]").value;
+
+let date=form.querySelector("input[type=date]").value;
+
+let guest=form.querySelector("input[type=number]").value;
+
+let msg=`Hello Vandana's Villa!
+
+Booking Request
+
+Name : ${name}
+
+Phone : ${phone}
+
+Date : ${date}
+
+Guests : ${guest}`;
+
+window.open(
+
+`https://wa.me/919769602777?text=${encodeURIComponent(msg)}`
+
+);
+
+});
