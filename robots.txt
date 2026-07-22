@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://vandanasvilla777-debug.github.io/Vandana-s-Villa-Gorai-/sitemap.xml
