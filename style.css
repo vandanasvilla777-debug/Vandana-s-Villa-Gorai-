@@ -1206,3 +1206,335 @@ padding:70px 0;
 }
 
 }
+/* ==========================================
+   PREMIUM GLASS NAVBAR
+========================================== */
+
+.navbar.scrolled{
+    background:rgba(17,17,17,.95);
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+
+/* ==========================================
+   HERO ANIMATION
+========================================== */
+
+.hero{
+    animation:heroZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+
+0%{
+background-size:100%;
+}
+
+100%{
+background-size:115%;
+}
+
+}
+
+/* ==========================================
+   FLOATING ANIMATION
+========================================== */
+
+@keyframes floating{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.amenity-card:hover,
+.review-card:hover,
+.nearby-card:hover{
+
+animation:floating .8s ease;
+
+}
+
+/* ==========================================
+   LIGHTBOX
+========================================== */
+
+#lightbox{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.95);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999999;
+
+cursor:zoom-out;
+
+}
+
+#lightbox img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.4);
+
+}
+
+#closeLightbox{
+
+position:absolute;
+
+top:20px;
+
+right:35px;
+
+font-size:45px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+/* ==========================================
+   BACK TO TOP
+========================================== */
+
+#topBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:175px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#D4AF37;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+transition:.3s;
+
+box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+z-index:9999;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* ==========================================
+   GALLERY HOVER
+========================================== */
+
+.gallery img{
+
+transition:.45s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.06);
+
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+/* ==========================================
+   BUTTON RIPPLE
+========================================== */
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::after{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+width:0;
+height:0;
+
+background:rgba(255,255,255,.3);
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+transition:.5s;
+
+}
+
+.btn:hover::after{
+
+width:350px;
+
+height:350px;
+
+}
+
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#D4AF37;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f1f1f1;
+
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection{
+
+background:#D4AF37;
+
+color:white;
+
+}
+
+/* ==========================================
+   IMAGE SHADOW
+========================================== */
+
+img{
+
+user-select:none;
+
+}
+
+img:hover{
+
+filter:brightness(1.03);
+
+}
+
+/* ==========================================
+   FOOTER EFFECT
+========================================== */
+
+footer{
+
+background:linear-gradient(180deg,#111,#000);
+
+}
+
+.footer-social a:hover{
+
+transform:translateY(-8px) rotate(360deg);
+
+}
+
+/* ==========================================
+   CARD BORDER EFFECT
+========================================== */
+
+.amenity-card,
+.review-card,
+.nearby-card,
+.reach-card{
+
+border:1px solid transparent;
+
+}
+
+.amenity-card:hover,
+.review-card:hover,
+.nearby-card:hover,
+.reach-card:hover{
+
+border-color:#D4AF37;
+
+}
+
+/* ==========================================
+   SMOOTH FADE
+========================================== */
+
+body{
+
+animation:fadeIn .8s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
