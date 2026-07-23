@@ -201,3 +201,183 @@ if (hero) {
     });
 
 }
+/* ==========================================
+   GALLERY LIGHTBOX
+========================================== */
+
+const galleryImages = document.querySelectorAll(".gallery-item img");
+
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+
+lightbox.innerHTML = `
+<div class="lightbox-content">
+    <span class="close-lightbox">&times;</span>
+    <img src="" alt="">
+</div>
+`;
+
+document.body.appendChild(lightbox);
+
+const lightboxImage = lightbox.querySelector("img");
+const closeBtn = lightbox.querySelector(".close-lightbox");
+
+galleryImages.forEach(image => {
+
+    image.addEventListener("click", () => {
+
+        lightbox.style.display = "flex";
+
+        lightboxImage.src = image.src;
+
+    });
+
+});
+
+closeBtn.addEventListener("click", () => {
+
+    lightbox.style.display = "none";
+
+});
+
+lightbox.addEventListener("click", function(e){
+
+    if(e.target===lightbox){
+
+        lightbox.style.display="none";
+
+    }
+
+});
+
+/* ==========================================
+   COUNTER ANIMATION
+========================================== */
+
+const counters=document.querySelectorAll(".counter");
+
+const counterObserver=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const speed=Math.ceil(target/120);
+
+function update(){
+
+count+=speed;
+
+if(count<target){
+
+counter.innerText=count;
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+}
+
+update();
+
+counterObserver.unobserve(counter);
+
+}
+
+});
+
+});
+
+counters.forEach(counter=>{
+
+counterObserver.observe(counter);
+
+});
+
+/* ==========================================
+   BACK TO TOP BUTTON
+========================================== */
+
+const topBtn=document.createElement("button");
+
+topBtn.id="topBtn";
+
+topBtn.innerHTML='<i class="fa-solid fa-arrow-up"></i>';
+
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+/* ==========================================
+   CURRENT YEAR
+========================================== */
+
+const year=document.getElementById("year");
+
+if(year){
+
+year.innerText=new Date().getFullYear();
+
+}
+
+/* ==========================================
+   IMAGE LAZY EFFECT
+========================================== */
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.setAttribute("loading","lazy");
+
+});
+
+/* ==========================================
+   DISABLE IMAGE DRAG
+========================================== */
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.setAttribute("draggable","false");
+
+});
+
+/* ==========================================
+   PRELOAD HERO IMAGE
+========================================== */
+
+const preload=new Image();
+
+preload.src="images/hero.jpg";
