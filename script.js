@@ -381,3 +381,207 @@ img.setAttribute("draggable","false");
 const preload=new Image();
 
 preload.src="images/hero.jpg";
+/* ==========================================
+   WHATSAPP BOOKING FORM
+========================================== */
+
+const bookingForm = document.getElementById("bookingForm");
+
+if (bookingForm) {
+
+bookingForm.addEventListener("submit", function (e) {
+
+e.preventDefault();
+
+const inputs = bookingForm.querySelectorAll("input, textarea");
+
+const name = inputs[0].value;
+const phone = inputs[1].value;
+const email = inputs[2].value;
+const date = inputs[3].value;
+const guests = inputs[4].value;
+const message = inputs[5].value;
+
+const whatsappMessage =
+`🏡 *New Booking Request*
+
+👤 Name: ${name}
+
+📞 Mobile: ${phone}
+
+📧 Email: ${email}
+
+📅 Check-in: ${date}
+
+👥 Guests: ${guests}
+
+📝 Message:
+${message}
+
+Website:
+Vandana's Villa`;
+
+const url =
+`https://wa.me/919769602777?text=${encodeURIComponent(whatsappMessage)}`;
+
+window.open(url, "_blank");
+
+bookingForm.reset();
+
+});
+
+}
+
+/* ==========================================
+   SCROLL PROGRESS BAR
+========================================== */
+
+const progressBar = document.createElement("div");
+
+progressBar.id = "progressBar";
+
+document.body.appendChild(progressBar);
+
+window.addEventListener("scroll", () => {
+
+const scrollTop =
+document.documentElement.scrollTop;
+
+const scrollHeight =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight;
+
+const progress =
+(scrollTop / scrollHeight) * 100;
+
+progressBar.style.width = progress + "%";
+
+});
+
+/* ==========================================
+   PARALLAX HERO
+========================================== */
+
+window.addEventListener("scroll", () => {
+
+const hero = document.querySelector(".hero");
+
+if (hero) {
+
+hero.style.backgroundPositionY =
+window.pageYOffset * 0.4 + "px";
+
+}
+
+});
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+const fadeElements =
+document.querySelectorAll("section");
+
+const fadeObserver =
+new IntersectionObserver((entries) => {
+
+entries.forEach((entry) => {
+
+if (entry.isIntersecting) {
+
+entry.target.animate(
+
+[
+{
+opacity:0,
+transform:"translateY(50px)"
+},
+{
+opacity:1,
+transform:"translateY(0)"
+}
+],
+
+{
+duration:900,
+fill:"forwards"
+}
+
+);
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+fadeElements.forEach(section => {
+
+fadeObserver.observe(section);
+
+});
+
+/* ==========================================
+   RIPPLE EFFECT ON BUTTON
+========================================== */
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+const circle=document.createElement("span");
+
+circle.className="ripple";
+
+const rect=this.getBoundingClientRect();
+
+circle.style.left=e.clientX-rect.left+"px";
+
+circle.style.top=e.clientY-rect.top+"px";
+
+this.appendChild(circle);
+
+setTimeout(()=>{
+
+circle.remove();
+
+},600);
+
+});
+
+});
+
+/* ==========================================
+   HIDE MOBILE MENU AFTER RESIZE
+========================================== */
+
+window.addEventListener("resize",()=>{
+
+if(window.innerWidth>768){
+
+document.getElementById("nav-links")
+.classList.remove("show");
+
+}
+
+});
+
+/* ==========================================
+   CONSOLE MESSAGE
+========================================== */
+
+console.log(
+"%c🏡 Welcome to Vandana's Villa",
+"color:#D4AF37;font-size:22px;font-weight:bold;"
+);
+
+console.log(
+"%cDesigned by CK's Limited",
+"color:#111;font-size:15px;"
+);
+
+/* ==========================================
+   END OF SCRIPT
+========================================== */
