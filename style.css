@@ -339,3 +339,263 @@ margin-bottom:50px;
 font-size:18px;
 
 }
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+#about{
+    background:#ffffff;
+}
+
+#about .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.about-image img:hover{
+    transform:scale(1.03);
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h2{
+    text-align:left;
+    margin-bottom:25px;
+}
+
+.about-content p{
+    color:#666;
+    font-size:17px;
+    margin-bottom:20px;
+    line-height:1.9;
+}
+
+/* ==========================================
+   FEATURE GRID
+========================================== */
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+margin-top:35px;
+
+}
+
+.feature-box{
+
+background:#fafafa;
+
+padding:25px;
+
+border-radius:18px;
+
+text-align:center;
+
+transition:.35s;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+}
+
+.feature-box:hover{
+
+background:#D4AF37;
+
+color:white;
+
+transform:translateY(-8px);
+
+}
+
+.feature-box i{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.feature-box h3{
+
+font-size:20px;
+
+}
+
+/* ==========================================
+   AMENITIES
+========================================== */
+
+#amenities{
+
+background:#f8f8f8;
+
+}
+
+.amenity-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.amenity-card{
+
+background:white;
+
+padding:40px 30px;
+
+text-align:center;
+
+border-radius:20px;
+
+transition:.35s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.amenity-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.amenity-card i{
+
+font-size:55px;
+
+color:#D4AF37;
+
+margin-bottom:20px;
+
+transition:.3s;
+
+}
+
+.amenity-card:hover i{
+
+transform:rotateY(180deg);
+
+}
+
+.amenity-card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.amenity-card p{
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+/* ==========================================
+   CARD EFFECT
+========================================== */
+
+.feature-box,
+.amenity-card{
+
+border:1px solid transparent;
+
+}
+
+.feature-box:hover,
+.amenity-card:hover{
+
+border-color:#D4AF37;
+
+box-shadow:0 20px 40px rgba(212,175,55,.25);
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+section h2{
+
+position:relative;
+
+display:inline-block;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding-bottom:15px;
+
+}
+
+section h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:0;
+
+transform:translateX(-50%);
+
+width:70px;
+
+height:4px;
+
+background:#D4AF37;
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+   ABOUT TITLE ALIGNMENT
+========================================== */
+
+.about-content h2{
+
+left:0;
+
+transform:none;
+
+}
+
+.about-content h2::after{
+
+left:0;
+
+transform:none;
+
+}
