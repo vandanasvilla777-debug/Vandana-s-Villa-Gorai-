@@ -1049,3 +1049,404 @@ transform:none;
 .contact-card:hover p{
     color:#fff;
 }
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background:#111;
+    color:#fff;
+    padding:80px 0 30px;
+    text-align:center;
+}
+
+.footer-logo{
+    width:100px;
+    margin:0 auto 20px;
+}
+
+footer h2{
+    color:#fff;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#bbb;
+    line-height:1.8;
+}
+
+.footer-social{
+    margin:30px 0;
+}
+
+.footer-social a{
+    width:50px;
+    height:50px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#222;
+    color:#fff;
+    border-radius:50%;
+    margin:0 8px;
+    font-size:20px;
+    transition:.35s;
+}
+
+.footer-social a:hover{
+    background:#D4AF37;
+    transform:translateY(-8px) rotate(360deg);
+}
+
+footer strong{
+    color:#D4AF37;
+}
+
+/* ==========================================
+FLOATING BUTTONS
+========================================== */
+
+.whatsapp,
+.call{
+
+position:fixed;
+
+right:25px;
+
+width:60px;
+height:60px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+font-size:28px;
+
+text-decoration:none;
+
+color:#fff;
+
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+z-index:9999;
+
+transition:.35s;
+
+}
+
+.whatsapp{
+
+bottom:25px;
+
+background:#25D366;
+
+}
+
+.call{
+
+bottom:100px;
+
+background:#D4AF37;
+
+}
+
+.whatsapp:hover,
+.call:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ==========================================
+BACK TO TOP BUTTON
+========================================== */
+
+#topBtn{
+
+position:fixed;
+
+left:25px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#D4AF37;
+
+color:#fff;
+
+font-size:24px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:9999;
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* ==========================================
+SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eee;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#D4AF37;
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+TEXT SELECTION
+========================================== */
+
+::selection{
+
+background:#D4AF37;
+
+color:#fff;
+
+}
+
+/* ==========================================
+ANIMATION
+========================================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ==========================================
+IMAGE EFFECT
+========================================== */
+
+img{
+
+transition:.5s;
+
+}
+
+img:hover{
+
+filter:brightness(1.05);
+
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media(max-width:992px){
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.room-card{
+
+grid-template-columns:1fr;
+
+}
+
+.room-content{
+
+padding:35px;
+
+}
+
+#about .container{
+
+flex-direction:column;
+
+}
+
+.about-content{
+
+text-align:center;
+
+}
+
+.about-content h2{
+
+text-align:center;
+
+}
+
+.about-content h2::after{
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+padding:15px 20px;
+
+}
+
+#menu-btn{
+
+display:block;
+
+}
+
+#nav-links{
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+background:#111;
+
+display:none;
+
+flex-direction:column;
+
+padding:20px 0;
+
+text-align:center;
+
+}
+
+#nav-links.show{
+
+display:flex;
+
+}
+
+.hero{
+
+height:90vh;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+section{
+
+padding:70px 0;
+
+}
+
+.input-group{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery-grid,
+.review-grid,
+.why-grid,
+.contact-grid,
+.nearby-grid,
+.reach-grid,
+.amenity-grid,
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.whatsapp,
+.call{
+
+width:55px;
+
+height:55px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+section h2{
+
+font-size:32px;
+
+}
+
+.price{
+
+font-size:28px;
+
+}
+
+}
