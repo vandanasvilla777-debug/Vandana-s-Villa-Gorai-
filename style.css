@@ -784,3 +784,19 @@ footer{
 }
 
 }
+#topBtn{
+position:fixed;
+bottom:30px;
+left:25px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#D4AF37;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+display:none;
+z-index:999;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
